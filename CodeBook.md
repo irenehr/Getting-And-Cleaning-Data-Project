@@ -5,7 +5,6 @@ The experiments have been carried out with a group of 30 volunteers within an ag
 The sensor signals (accelerometer and gyroscope) were pre-processed by applying noise filters and then sampled in fixed-width sliding windows of 2.56 sec and 50% overlap (128 readings/window). The sensor acceleration signal, which has gravitational and body motion components, was separated using a Butterworth low-pass filter into body acceleration and gravity. The gravitational force is assumed to have only low frequency components, therefore a filter with 0.3 Hz cutoff frequency was used. From each window, a vector of features was obtained by calculating variables from the time and frequency domain. See 'features_info.txt' for more details. 
 
 For each record it was provided:
-======================================
 
 - Triaxial acceleration from the accelerometer (total acceleration) and the estimated body acceleration.
 - Triaxial Angular velocity from the gyroscope. 
@@ -14,7 +13,7 @@ For each record it was provided:
 - An identifier of the subject who carried out the experiment.
 
 Notes: 
-======
+
 - Features are normalized and bounded within [-1,1].
 - Each feature vector is a row on the text file.
 
@@ -32,14 +31,22 @@ These signals were used to estimate variables of the feature vector for each pat
 The variables that where chosen from original data set (https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip) where those with the words "mean" or "std" in them, meaning that they were calculating mean and standard deviation of measurements.
 The original data set consisted of 6 different files which were merged. There were 2 sets of 3 files (who did it (subject), what he/she did (activity) and what where the measurements).
 So along with mean and std variables, subject and activity variables are also kept in the outcoming data set. 
-The final values are the average of each of the variables for each subject and activity as shown in the tidydata.txt
+The final values are the average of each of the variables for each subject and activity as shown in the tidydata.txt. They are all (variables 3-81) numeric values.
 
 mean(): Mean value
 std(): Standard deviation
 meanFreq(): Weighted average of the frequency components to obtain a mean frequency
 											
-"activity"                        
-"subject"                        
+"activity"   
+  Factor w/ 6 levels
+   1            WALKING
+   2   WALKING_UPSTAIRS
+   3 WALKING_DOWNSTAIRS
+   4            SITTING
+   5           STANDING
+   6             LAYING
+"subject" 
+   int with range 1:30
 "tBodyAcc-mean()-X"               
 "tBodyAcc-mean()-Y"              
 "tBodyAcc-mean()-Z"               
