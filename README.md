@@ -14,22 +14,39 @@ where file_path is the path for the "tidydata.txt" file provided
 
 The steps (also written as comments in the run_analysis.R) are the following:
 
- Read the 6 files inside train and test folders
- Set a name in V1 columns (in y_test, subject_test, y_train, subject_train) to avoid confusion
- Merge the 3 test files (all 3 have same number of rows)
- Merge the 3 train files (all 3 have same number of rows)
- Merge test and train data (both have same number of columns)
- Read the file that contains activities names
- Use descriptive activity names to name the activities in the data set from activity_labels file
- Read the file that contains features names
- Find features containing the words "mean" or "std" (index)
- Subset mergedData based on the features_list to a temporary file (79 columns)
+ Read the 6 files inside train and test folders.
+ 
+ Set a name in V1 columns (in y_test, subject_test, y_train, subject_train) to avoid confusion.
+ 
+ Merge the 3 test files (all 3 have same number of rows).
+ 
+ Merge the 3 train files (all 3 have same number of rows).
+ 
+ Merge test and train data (both have same number of columns).
+ 
+ Read the file that contains activities names.
+ 
+ Use descriptive activity names to name the activities in the data set from activity_labels file.
+ 
+ Read the file that contains features names.
+ 
+ Find features containing the words "mean" or "std" (index).
+ 
+ Subset mergedData based on the features_list to a temporary file (79 columns).
+ 
  Besure to also keep "activity" and "subject" to a second temporary file !!! (2 columns)
- Make a list of the names of the features (with the value = TRUE now we have the names returned rather than indexes)
- Rename the columns of the first temporary file
- Merge the two files (total 81 columns)
- load reshape2 library
+ 
+ Make a list of the names of the features (with the value = TRUE now we have the names returned rather than indexes).
+ 
+ Rename the columns of the first temporary file.
+ 
+ Merge the two files (total 81 columns).
+ 
+ load reshape2 library.
+ 
  create tidy data set with the average of each variable for each activity and each subject using reshape2 library.
- write the tidy data to a txt file
+ 
+ write the tidy data to a txt file.
+ 
 
 Enjoy :) 
