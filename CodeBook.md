@@ -37,16 +37,21 @@ mean(): Mean value
 std(): Standard deviation
 meanFreq(): Weighted average of the frequency components to obtain a mean frequency
 											
-"activity"   
+"activity" 
+
   Factor w/ 6 levels
+  
    1            WALKING
    2   WALKING_UPSTAIRS
    3 WALKING_DOWNSTAIRS
    4            SITTING
    5           STANDING
    6             LAYING
+   
 "subject" 
+
    int with range 1:30
+   
 "tBodyAcc-mean()-X"               
 "tBodyAcc-mean()-Y"              
 "tBodyAcc-mean()-Z"               
